@@ -1,3 +1,21 @@
-<form>
-  <input type="file" (change)="uploadVCF($event)">
-</form>
+<nav class="navbar navbar-dark navbar-expand-lg bg-primary mb-3">
+  <a class="navbar-brand" href="/">VirusMutationsAI</a>
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/">{{'menu.MutationAnnotation' | translate }}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">{{'menu.Features' | translate }}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">{{'menu.Price' | translate }}</a>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>

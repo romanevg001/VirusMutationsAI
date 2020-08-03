@@ -1,0 +1,10 @@
+{
+  "menu": {
+      "MutationAnnotation":"Mutation annotation",
+      "Features":"Features",
+      "Price":"Price"
+  },
+  "MutationAnnotation": {
+    "btn_load-vcf": "Upload vcf-file of mutation"
+  }
+}
