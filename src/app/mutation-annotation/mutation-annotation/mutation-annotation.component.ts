@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FileUploadModel } from '../../models/file-upload.model';
-import { AppService } from '../../services/app.service';
+import { MutationAnnotationService } from '../mutation-annotation.service';
 
 @Component({
   selector: 'app-mutation-annotation',
@@ -10,7 +10,7 @@ import { AppService } from '../../services/app.service';
 export class MutationAnnotationComponent implements OnInit {
 
   constructor(
-    private appService: AppService
+    private mutationAnnotationService: MutationAnnotationService
   ) {}
 
   ngOnInit(): void {
@@ -20,7 +20,7 @@ export class MutationAnnotationComponent implements OnInit {
     const file: FileUploadModel = e.srcElement.files[0];
     const ext = file.name && file.name.split('.')[1];
     if (ext === 'vcf') {
-      this.appService.uploadVCF(file).subscribe();
+      this.mutationAnnotationService.uploadVCF(file).subscribe();
 
     }
   }
