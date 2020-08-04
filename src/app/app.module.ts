@@ -10,9 +10,7 @@ import {TranslateLoader, TranslateModule, TranslateCompiler} from '@ngx-translat
 import {TranslateService} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { VMAI_CONFIG, APP_CONFIG } from './app.config';
-// export function HttpLoaderFactory(http: HttpClient) {
-//   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-// }
+import { ErrorModalComponent } from './shared/error-modal/error-modal.component';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +18,8 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ErrorModalComponent
   ],
   imports: [
     BrowserModule,

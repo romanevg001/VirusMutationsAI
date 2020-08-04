@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SharedService } from './shared/shared.service';
+import { Store, StoreConfig } from '@datorama/akita';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,8 @@ import { SharedService } from './shared/shared.service';
 })
 export class AppComponent {
 
-  isLoading = true;
+  isLoading = false;
+  modalMessage = '';
 
   constructor(
     private readonly sharedService: SharedService,
@@ -16,6 +18,9 @@ export class AppComponent {
 
     this.sharedService.preloaderSbj.subscribe(val => {
       this.isLoading = val;
+    });
+    this.sharedService.errorModalSbj.subscribe(message => {
+      this.modalMessage = message;
     });
   }
 

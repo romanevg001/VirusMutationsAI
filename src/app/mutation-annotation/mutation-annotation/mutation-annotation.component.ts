@@ -26,7 +26,6 @@ export class MutationAnnotationComponent implements OnInit {
     const ext = file.name && file.name.split('.')[1];
     if (ext === 'vcf') {
       this.mutationAnnotationService.uploadVCF(file).subscribe(list => {
-        console.log('list',list)
         this.listArticles = list;
       });
 

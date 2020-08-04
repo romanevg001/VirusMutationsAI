@@ -12,7 +12,9 @@ export interface MutationAnnotationState extends EntityState<MutationAnnotationM
 export class  MutationAnnotationStore extends EntityStore<MutationAnnotationState> {
 
   constructor() {
-    super();
+    super({
+      loading: false
+    });
   }
 }
 
