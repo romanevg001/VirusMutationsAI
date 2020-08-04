@@ -1,5 +1,5 @@
 <nav class="navbar navbar-dark navbar-expand-lg bg-primary mb-3">
-  <a class="navbar-brand" href="/">VirusMutationsAI</a>
+  <a class="navbar-brand" href="/"> <i class="icon-coronavirus fs-30"></i> VirusMutationsAI</a>
 
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
@@ -7,10 +7,10 @@
         <a class="nav-link" routerLink="/">{{'menu.MutationAnnotation' | translate }}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">{{'menu.Features' | translate }}</a>
+        <a class="nav-link" href="#">{{'menu.Part1' | translate }}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">{{'menu.Price' | translate }}</a>
+        <a class="nav-link" href="#">{{'menu.Part2' | translate }}</a>
       </li>
     </ul>
     
@@ -19,3 +19,4 @@
 <div class="container-fluid">
   <router-outlet></router-outlet>
 </div>
+<div *ngIf="isLoading" class="preloader"><div class="spinner"></div></div>

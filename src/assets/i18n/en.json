@@ -1,10 +1,11 @@
 {
   "menu": {
       "MutationAnnotation":"Mutation annotation",
-      "Features":"Features",
-      "Price":"Price"
+      "Part1":"Part 1",
+      "Part2":"Part 2"
   },
   "MutationAnnotation": {
+    "title": "Articles",
     "btn_load-vcf": "Upload vcf-file of mutation"
   }
 }
