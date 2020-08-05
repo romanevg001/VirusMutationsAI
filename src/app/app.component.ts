@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { SharedService } from './shared/shared.service';
-import { Store, StoreConfig } from '@datorama/akita';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +12,7 @@ export class AppComponent {
   modalMessage = '';
 
   constructor(
-    private readonly sharedService: SharedService,
+    private readonly sharedService: SharedService
   ) {
 
     this.sharedService.preloaderSbj.subscribe(val => {

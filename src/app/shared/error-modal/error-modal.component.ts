@@ -17,7 +17,7 @@ export class ErrorModalComponent implements OnInit, OnChanges {
 
   }
 
-  ngOnChanges(change){
+  ngOnChanges(change): void {
     if (change.hasOwnProperty('errMessage')){
       clearTimeout(this.outkey);
       this.outkey = setTimeout(_ => {
@@ -26,7 +26,7 @@ export class ErrorModalComponent implements OnInit, OnChanges {
     }
   }
 
-  close() {
+  close(): void {
     clearTimeout(this.outkey);
     this.sharedService.errorModal();
   }

@@ -14,12 +14,12 @@ export class SharedService {
   public preloaderSbj = new Subject<boolean>();
   public errorModalSbj = new Subject<string>();
 
-  setLoader(val: boolean) {
+  setLoader(val: boolean): void {
     this.preloaderSbj.next(val);
   }
 
 
-  errorModal(message?){
+  errorModal(message?): void {
     this.errorModalSbj.next(
       message
     );
